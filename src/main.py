@@ -7,7 +7,7 @@ app = FastAPI()
 
 @app.get("/ap")
 def get_all_access_points():
-    access_points = wifi.get_all_access_points()``
+    access_points = wifi.get_all_access_points()
     return {"access_points": [ap.__dict__ for ap in access_points]}
 
 @app.post("/connect")
